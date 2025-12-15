@@ -15,7 +15,7 @@ Verso documentation roles for Coq/Flocq references in literate Lean 4 projects.
 Add to your `lakefile.lean`:
 
 ```lean
-require VersoCoq from git "https://github.com/Beneficial-AI-Foundation/VersoCoq"
+require VersoCoq from git "https://github.com/alok/VersoCoq"
 ```
 
 ## Usage
@@ -32,7 +32,7 @@ open Lake DSL
 
 package MyProject
 
-require VersoCoq from git "https://github.com/Beneficial-AI-Foundation/VersoCoq"
+require VersoCoq from git "https://github.com/alok/VersoCoq"
 
 -- Roles library - compiles FIRST
 lean_lib MyProjectRoles where
