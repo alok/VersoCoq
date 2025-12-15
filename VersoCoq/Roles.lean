@@ -30,7 +30,7 @@ namespace VersoCoq.Roles
     Helper function that extracts the string from a single code inline element.
     Mimics the private `onlyCode` in `Lean.Elab.DocString.Builtin`.
 -/
-private def onlyCode [Monad m] [MonadError m] (xs : TSyntaxArray `inline) : m StrLit := do
+private def onlyCode {M : Type → Type} [Monad M] [MonadError M] (xs : TSyntaxArray `inline) : M StrLit := do
   if h : xs.size = 1 then
     match xs[0] with
     | `(inline|code($s)) => return s
@@ -59,7 +59,7 @@ private def onlyCode [Monad m] [MonadError m] (xs : TSyntaxArray `inline) : m St
 @[doc_role]
 def coq (xs : TSyntaxArray `inline) : DocM (Inline ElabInline) := do
   let s ← onlyCode xs
-  let txt := s.getString
+  let txt := TSyntax.getString s
   -- Generate Flocq URL if the identifier matches a known pattern
   match Flocq.inferUrl txt with
   | some url => return .link #[.code txt] url

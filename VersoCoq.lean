@@ -57,7 +57,7 @@ import VersoCoq.Flocq
 -- Add custom mappings
 def myMappings := VersoCoq.Flocq.addPrefixMapping
   VersoCoq.Flocq.allPrefixMappings
-  ⟨"MyPrefix_", "MyModule.Path", .core⟩
+  "MyPrefix_" "MyModule.Path"
 ```
 -/
 
@@ -66,7 +66,7 @@ import VersoCoq.Roles
 
 namespace VersoCoq
 
-/-- Re-export Flocq utilities -/
-export Flocq (inferUrl inferModule inferCategory isFlocqDecl knownModules baseUrl)
+-- Re-export Flocq utilities
+export Flocq (inferUrl inferModule isFlocqDecl knownModules baseUrl)
 
 end VersoCoq
