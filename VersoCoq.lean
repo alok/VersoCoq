@@ -7,7 +7,7 @@ Verso documentation roles for Coq/Flocq references in literate Lean 4.
 
 Add to your `lakefile.lean`:
 ```lean
-require «verso-coq» from git "https://github.com/Beneficial-AI-Foundation/verso-coq"
+require VersoCoq from git "https://github.com/Beneficial-AI-Foundation/VersoCoq"
 ```
 
 ## Usage

@@ -1,7 +1,7 @@
 import Lake
 open Lake DSL
 
-/-- verso-coq: Verso documentation roles for Coq/Flocq references
+/-- VersoCoq: Verso documentation roles for Coq/Flocq references
 
     Provides semantic documentation roles for literate Lean 4 projects
     that reference Coq libraries, particularly Flocq (Floats for Coq).
@@ -10,7 +10,7 @@ open Lake DSL
     - `{coq}` role: Auto-links Coq identifiers to Flocq documentation
     - Extensible URL inference for Flocq modules
 -/
-package «verso-coq» where
+package VersoCoq where
   leanOptions := #[
     ⟨`autoImplicit, false⟩,
     ⟨`relaxedAutoImplicit, false⟩,

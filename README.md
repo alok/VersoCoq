@@ -1,8 +1,8 @@
-# verso-coq
+# VersoCoq
 
 Verso documentation roles for Coq/Flocq references in literate Lean 4 projects.
 
-[![Reservoir](https://img.shields.io/badge/reservoir-verso--coq-blue)](https://reservoir.lean-lang.org/)
+[![Reservoir](https://img.shields.io/badge/reservoir-VersoCoq-blue)](https://reservoir.lean-lang.org/)
 
 ## Features
 
@@ -15,7 +15,7 @@ Verso documentation roles for Coq/Flocq references in literate Lean 4 projects.
 Add to your `lakefile.lean`:
 
 ```lean
-require «verso-coq» from git "https://github.com/Beneficial-AI-Foundation/verso-coq"
+require VersoCoq from git "https://github.com/Beneficial-AI-Foundation/VersoCoq"
 ```
 
 ## Usage
@@ -32,7 +32,7 @@ open Lake DSL
 
 package MyProject
 
-require «verso-coq» from git "https://github.com/Beneficial-AI-Foundation/verso-coq"
+require VersoCoq from git "https://github.com/Beneficial-AI-Foundation/VersoCoq"
 
 -- Roles library - compiles FIRST
 lean_lib MyProjectRoles where
@@ -76,7 +76,7 @@ import VersoCoq.Flocq
 
 def myMappings := VersoCoq.Flocq.addPrefixMapping
   VersoCoq.Flocq.allPrefixMappings
-  ⟨"MyCoq_", "My.Module.Path", .core⟩
+  "MyCoq_" "My.Module.Path"
 ```
 
 ## API Reference
@@ -87,7 +87,6 @@ def myMappings := VersoCoq.Flocq.addPrefixMapping
 |----------|------|-------------|
 | `inferUrl` | `String → Option String` | Get Flocq doc URL for identifier |
 | `inferModule` | `String → Option String` | Get Flocq module path |
-| `inferCategory` | `String → Option ModuleCategory` | Get module category |
 | `isFlocqDecl` | `String → Bool` | Check if identifier is from Flocq |
 | `knownModules` | `List String` | All known Flocq modules |
 
