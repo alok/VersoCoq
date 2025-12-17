@@ -17,8 +17,8 @@ package VersoCoq where
     ⟨`linter.missingDocs, true⟩
   ]
 
-/-- Verso dependency for doc role infrastructure -/
-require verso from git "https://github.com/leanprover/verso" @ "v4.27.0-rc1"
+-- Note: Using Lean's built-in @[doc_role] system (Lean.Elab.DocString)
+-- No external dependencies required for docstring roles
 
 /-- Core utilities (URL inference, module mappings) - no special compilation order needed -/
 lean_lib VersoCoqCore where
